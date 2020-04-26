@@ -1,0 +1,15 @@
+
+Thread
+- 작업흐름
+
+안드로이드 Thread
+-> MainThread
+-> Launcher Activity
+-> Activity
+-> 프로세스 실행
+
+
+안드로이드 MainThread의 특징
+- UI(User Interface) Thread -> 사용자의 input을 받는 Thread
+                            -> 절대 강제 저이 시키면 안됨.
+-

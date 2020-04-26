@@ -6,3 +6,12 @@ Fragment
 
 - 라이프 사이클이 존재
 - 액티비티 종속적
+
+
+사용방법
+- XML 컴포넌트로 추가
+- 코드로 추가
+
+데이터 전달 방법
+- Activity -> Fragment : argument, bundle 사용
+- Fragment -> Activity : 자체 구현 (리스너 구현)

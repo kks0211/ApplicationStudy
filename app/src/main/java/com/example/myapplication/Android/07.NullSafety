@@ -1,0 +1,25 @@
+
+Null Safety
+- Null에 대해서 안전하다
+- 코틀린 특징
+
+Null Safety 하기 위한 방법
+-> ?    : Null이 아니라면 이하 구문 실핼
+-> !!   : Null이 아님을 개발자가 보장
+
+1.
+button?.setOnClickListener
+button이 null이 아니면 실행
+
+2.
+if(button != null){
+    button.setOnClickListener
+    }
+
+같은 표현
+
+button!!.setOnClickListener -> 100%확신 할때만
+
+Null이 될수 없는 타입
+Int, Double, Float, Class -> Null이 될수 없는 타임
+Int?, Double?, Float?, Class? -> Null 이 될수 있는 타입
