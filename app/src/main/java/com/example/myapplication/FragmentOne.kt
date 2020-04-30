@@ -18,7 +18,7 @@ class FragmentOne : Fragment() {
     lateinit var dataPasseListener : OnDataPassListener
 
 
-    override fun onAttach(context: Context?) {
+    override fun onAttach(context: Context) {
         Log.d("life_cylcle", "F onAttach")
         super.onAttach(context)
         dataPasseListener = context as OnDataPassListener //형변환

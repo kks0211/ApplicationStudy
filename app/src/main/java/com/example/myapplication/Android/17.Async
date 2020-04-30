@@ -1,0 +1,25 @@
+
+
+
+비동기 -> Async
+      - 쓰레드를 만들어서 작업을 따로 처리함
+
+동기 -> Sync
+    - 작업을 순서대로 진행함
+
+
+안드로이드에서 Async 다루는 방법
+ - AsyncTask 상속
+  - onPreExcute         : 쓰레드 시작전  할 작업
+  - doIntBackground     : 쓰레드가 할 작업
+  - onPregressUpdate    : 메인쓰레드로 동작 (진행 사항 표시)
+  - onPostExcute        : 작업을 다 마친 후 메인쓰레드
+
+Async의 장점
+    - 메인 쓰레드를 기다리게 할 필요가 없음음
+    - 네트워크 작업에서 주로 사용
+
+Async의 단점
+    - 재사용 불가
+    - 구현된 Activity가 종료 될 경우 Async는 같이 종료되지 않음
+    - AsyncTask는 하나씩만 실행된다.

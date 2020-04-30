@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListViewActivity">
+    android:orientation="vertical"
+    tools:context=".PhoneBookWithRecyclerViewActivity">
 
-    <ListView
-        android:id="@+id/listView"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/phonebook_recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@null" />
+        />
+
 </LinearLayout>
