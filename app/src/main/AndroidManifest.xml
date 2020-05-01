@@ -13,7 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/MyTheme">
         <activity android:name=".Song_item"></activity>
-        <activity android:name=".AppleActivity" />
         <activity android:name=".PermissionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
