@@ -1,0 +1,59 @@
+
+
+
+Network
+  -> 통신
+
+  DataBase      Server      Client
+    글                       A
+    댓글                      B
+
+  Local DataBase의 한계
+  - 동기화가 어려움
+  - 상호작용이 불가능 (댓글 달기)
+
+
+Server와 통신하는 방법
+    - 해당 URL로 요청
+    - 인증 정보를 보냄
+    - JSON(자바스크립트에서 객체를 만들 때 사용하는 표현식) 형식을 사용해서 DATA 전송
+
+
+JSON 형식
+    - [] -> List
+    - {} -> 객체
+    - "" -> 문자열
+    -    -> 숫자
+
+    [
+        {
+            "id" : 1,
+            "name" : "홍길동"
+        }
+    ]
+
+
+JSON Pasing
+    -> JSON을 코틀이나 자바가 이해할 수 있게 변형하는 과정
+
+Serializable (직렬화)
+    -> 코틀린 / 자바 가 이해 할수 있는 틀 (데이터 매핑)
+        class Person(
+                    var id : Int? = null
+                    var name : String? = null
+                    )
+
+        Person(1, "홍길동")
+
+
+
+Request Type
+- GET       -> 정보 요청
+- POST      -> 정보 추가 요청
+- DELETE    -> 정소 삭제 요청
+- PUT       -> 정보 수정요청
+
+
+Library
+ - Volly
+ - Retrofit
