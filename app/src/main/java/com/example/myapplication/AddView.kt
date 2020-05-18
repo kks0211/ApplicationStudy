@@ -16,19 +16,19 @@ class AddView : AppCompatActivity() {
 
         val carList = ArrayList<CarForList>()
         //item list
-        for(i in 0 until  10){
+        for (i in 0 until 10) {
             carList.add(CarForList("$i 번째 자동차", "$i 순위 엔진"))
         }
 
         val container = findViewById<LinearLayout>(R.id.addview_container)
         val inflater = LayoutInflater.from(this@AddView)
 
-        for(i in 0 until carList.size){
+        for (i in 0 until carList.size) {
             val itemView = inflater.inflate(R.layout.item_view, null)
             val carNameView = itemView.findViewById<TextView>(R.id.car_name)
             val carEngineView = itemView.findViewById<TextView>(R.id.car_engine)
 
-            carNameView.setText(carList.get(i).name)
+            carNameView.text = carList[i].name
             carEngineView.setText(carList.get(i).engine)
 
             container.addView(itemView)
@@ -37,6 +37,4 @@ class AddView : AppCompatActivity() {
     }
 }
 
-class CarForList(val name: String, val engine: String){
-
-}
+class CarForList(val name: String, val engine: String) {}

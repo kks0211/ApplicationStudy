@@ -31,24 +31,26 @@ class RecyclerViewActivity : AppCompatActivity() {
         recycler_view.layoutManager = LinearLayoutManager(this@RecyclerViewActivity)
         //recycler_view.layoutManager = GridLayoutManager(this@RecyclerViewActivity, 2)
     }
+
 }
 
-class RecyclerViewAdapter(val itemList: ArrayList<CarForList>,
-                          val inflater : LayoutInflater) : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>(){
+class RecyclerViewAdapter(
+    val itemList: ArrayList<CarForList>,
+    val inflater: LayoutInflater
+) : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
 
-    inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        val carName: TextView
-        val carEngine: TextView
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val carName: TextView = itemView.findViewById(R.id.car_name)
+        val carEngine: TextView = itemView.findViewById(R.id.car_engine)
 
-        init{
-            carName = itemView.findViewById(R.id.car_name)
-            carEngine = itemView.findViewById(R.id.car_engine)
-            itemView.setOnClickListener{
+        init {
+            itemView.setOnClickListener {
                 val position: Int = adapterPosition
                 val engineName = itemList.get(position).engine
                 Log.d("engine", engineName)
             }
         }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -62,7 +64,8 @@ class RecyclerViewAdapter(val itemList: ArrayList<CarForList>,
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         //재활용
-        holder.carName.setText(itemList.get(position).name)
+        holder.carName.text = itemList[position].name
         holder.carEngine.setText(itemList.get(position).engine)
     }
+
 }

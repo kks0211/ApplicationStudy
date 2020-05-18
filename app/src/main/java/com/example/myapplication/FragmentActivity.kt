@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_fragment.*
 class FragmentActivity : AppCompatActivity(), FragmentOne.OnDataPassListener {
 
     override fun onDataPass(data: String?) {
-        Log.d("pass", data+"")
+        Log.d("pass", "$data")
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,16 +17,15 @@ class FragmentActivity : AppCompatActivity(), FragmentOne.OnDataPassListener {
         setContentView(R.layout.activity_fragment)
         Log.d("life_cylcle", "onCreate")
 
-        val fragmentOne : FragmentOne = FragmentOne()
+        val fragmentOne: FragmentOne = FragmentOne()
         // fragment에 데이터를 넣어주는 방법
-        val bundle : Bundle = Bundle()
+        val bundle: Bundle = Bundle()
         bundle.putString("hello", "hello")
         fragmentOne.arguments = bundle
 
-
         button.setOnClickListener {
             //fragment 동적으로 작동 하는 방법
-            val fragmentManager : FragmentManager = supportFragmentManager
+            val fragmentManager: FragmentManager = supportFragmentManager
 
             //Transation
             //작업의 단위
@@ -51,31 +50,32 @@ class FragmentActivity : AppCompatActivity(), FragmentOne.OnDataPassListener {
         }
 
     }
-        override fun onStart() {
-            Log.d("life_cylcle", "onStart")
-            super.onStart()
-        }
 
-        override fun onResume() {
-            super.onResume()
-            Log.d("life_cylcle", "onResume")
-        }
+    override fun onStart() {
+        Log.d("life_cylcle", "onStart")
+        super.onStart()
+    }
 
-        override fun onPause() {
-            super.onPause()
-            Log.d("life_cylcle", "onPause")
+    override fun onResume() {
+        super.onResume()
+        Log.d("life_cylcle", "onResume")
+    }
 
-        }
+    override fun onPause() {
+        super.onPause()
+        Log.d("life_cylcle", "onPause")
 
-        override fun onStop() {
-            super.onStop()
-            Log.d("life_cylcle", "onStop")
-        }
+    }
 
-        override fun onDestroy() {
-            super.onDestroy()
-            Log.d("life_cylcle", "onDestroy")
-        }
+    override fun onStop() {
+        super.onStop()
+        Log.d("life_cylcle", "onStop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("life_cylcle", "onDestroy")
+    }
 
 
 }

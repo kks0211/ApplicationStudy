@@ -6,7 +6,7 @@ RecyclerView
     - ListView의 개선
         - ViewHolder 포함
     - 유연하다
-        -LayoutManager
+        -LayoutManager (스크롤을 가로, 세로 방향으로 움직일수 있도록 지원해줌)
             - Linear
             - Glide
             - StaggererGrid

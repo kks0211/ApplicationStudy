@@ -53,7 +53,7 @@ class PagerAdapter(
             2 -> {
                 return Fragment3()
             }
-            else -> return return Fragment1()
+            else -> return Fragment1()
         }
     }
 

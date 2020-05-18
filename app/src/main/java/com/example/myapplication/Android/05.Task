@@ -7,7 +7,7 @@ Task (엑티비티와 같음)
   -> launchMode
       //다중허용
       -standard
-      -singleTop  -> 열려고 하는 액티비티라면 onNewIntent를 호출
+      -singleTop    ->    열려고 하는 액티비티라면 onNewIntent를 호출
       //다중허용안함
       -singleTask
       -singleInstance

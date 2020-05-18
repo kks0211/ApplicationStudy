@@ -6,6 +6,7 @@ Null Safety
 Null Safety 하기 위한 방법
 -> ?    : Null이 아니라면 이하 구문 실핼
 -> !!   : Null이 아님을 개발자가 보장
+-> ?: ""  : Null 이면 ""
 
 1.
 button?.setOnClickListener

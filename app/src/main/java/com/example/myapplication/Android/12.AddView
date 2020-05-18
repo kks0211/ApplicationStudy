@@ -12,5 +12,5 @@
                 -> 반복한다.
 
  - ListView     -> 예전에 많이 사용
- - RecycleView  -> 최근에 가장 많이 사용
+ - RecyclerView  -> 최근에 가장 많이 사용
 

@@ -2,12 +2,12 @@
 context
 
 역할 -> ActivityManagerService(개발하기 편하도록 미리 구현 해놓은 기능)에 접근 하도록 해주는 역할
-
+        AppCompatActivity (에서 Context API를 이미 상속하고 있음)
 안드로이드는 이미 많은 부분들이 만들어져 있음.
 -> context가 필요.
 
 종류
+- ApplicationContext > ActivityContext
 - Activity의 Context(주변정보) -> Activity의 주변 정보
 - Application의 Context(주변정보) -> Application의 주변정보
-- ApplicationContext > ActivityContext
 

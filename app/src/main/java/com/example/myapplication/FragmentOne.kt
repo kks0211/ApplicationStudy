@@ -11,17 +11,16 @@ import kotlinx.android.synthetic.main.fragment_one.*
 
 class FragmentOne : Fragment() {
 
+    lateinit var dataPasseListener: OnDataPassListener
+
     interface OnDataPassListener {
         fun onDataPass(data: String?)
     }
 
-    lateinit var dataPasseListener : OnDataPassListener
-
-
     override fun onAttach(context: Context) {
         Log.d("life_cylcle", "F onAttach")
         super.onAttach(context)
-        dataPasseListener = context as OnDataPassListener //형변환
+        dataPasseListener = context as OnDataPassListener // 형변환
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,6 +58,7 @@ class FragmentOne : Fragment() {
 
         val data = arguments?.getString("hello")
         Log.d("data", data)
+
         super.onActivityCreated(savedInstanceState)
     }
 

@@ -16,9 +16,9 @@ class Intent2 : AppCompatActivity() {
 
 
 
-        result.setOnClickListener{
-            val number1 = intent.getIntExtra("number1",0)
-            val number2 = intent.getIntExtra("number2",0)
+        result.setOnClickListener {
+            val number1 = intent.getIntExtra("number1", 0)
+            val number2 = intent.getIntExtra("number2", 0)
 
             Log.d("numer1", number1.toString())
             Log.d("numer2", number2.toString())
@@ -26,7 +26,7 @@ class Intent2 : AppCompatActivity() {
             val result = number1 + number2
 
             val resultIntent = Intent()
-            resultIntent.putExtra("result" , result)
+            resultIntent.putExtra("result", result)
 
             setResult(Activity.RESULT_OK, resultIntent)
             this.finish()// -> Activity 종료

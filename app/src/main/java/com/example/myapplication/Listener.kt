@@ -44,6 +44,10 @@ class Listener : AppCompatActivity() {
         }
         hello.setOnClickListener(click)
 
+        hello.setOnClickListener {
+            Log.d("Test : " , "Click!!")
+
+        }
 
 
 

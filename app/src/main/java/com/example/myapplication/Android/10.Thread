@@ -11,5 +11,4 @@ Thread
 
 안드로이드 MainThread의 특징
 - UI(User Interface) Thread -> 사용자의 input을 받는 Thread
-                            -> 절대 강제 저이 시키면 안됨.
--
+                            -> 절대 강제 제어 시키면 안됨. (앱 종료)

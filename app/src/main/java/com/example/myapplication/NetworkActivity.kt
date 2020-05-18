@@ -32,7 +32,7 @@ class NetworkActivity : AppCompatActivity() {
 
 class NetworkTask( val recyclerView : RecyclerView,
                    val inflater : LayoutInflater
-                   ) : AsyncTask<Any?, Any?, Array<PersonFromServer>>() {
+) : AsyncTask<Any?, Any?, Array<PersonFromServer>>() {
 
     override fun onPostExecute(result: Array<PersonFromServer>?) {
         // 여기는 UI 쓰레드에 접근 가능하기 때문에 여기에서 뷰를 그려준다

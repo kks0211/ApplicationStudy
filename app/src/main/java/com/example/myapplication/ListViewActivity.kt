@@ -15,25 +15,27 @@ import java.util.*
 
  class ListViewActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_list_view)
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
+         setContentView(R.layout.activity_list_view)
 
-        val carList = ArrayList<CarForList>()
-        //item list
-        for(i in 0 until 30){
-            carList.add(CarForList("$i 번째 자동차", "$i 순위 엔진"))
-        }
-        val adapter = ListViewAdapter(carList, this@ListViewActivity)
-        listView.adapter = adapter
-        listView.setOnItemClickListener { parent, view, position, id ->
-            val carName = (adapter.getItem(position) as CarForList).name
-            val carEngine = (adapter.getItem(position) as CarForList).engine
+         val carList = ArrayList<CarForList>()
+         //item list
+         for (i in 0 until 30) {
+             carList.add(CarForList("$i 번째 자동차", "$i 순위 엔진"))
+         }
 
-            Toast.makeText(this@ListViewActivity, "$carName $carEngine", Toast.LENGTH_SHORT).show()
+         val adapter = ListViewAdapter(carList, this@ListViewActivity)
+         listView.adapter = adapter
+         listView.setOnItemClickListener {
+                 parent, view, position, id ->
+             val carName = (adapter.getItem(position) as CarForList).name
+             val carEngine = (adapter.getItem(position) as CarForList).engine
+             Toast.makeText(this@ListViewActivity, "$carName $carEngine", Toast.LENGTH_SHORT).show()
+         }
 
-        }
-    }
+     }
+
 }
 
  class ListViewAdapter(val carForList : ArrayList<CarForList>
@@ -41,7 +43,8 @@ import java.util.*
 
      override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
          val layoutInflater = LayoutInflater.from(context)
-         /*  val view = layoutInflater.inflate(R.layout.item_view, null)
+
+         /*val view = layoutInflater.inflate(R.layout.item_view, null)
            val carNameTextView = view.findViewById<TextView>(R.id.car_name)
            val carEngineTextView = view.findViewById<TextView>(R.id.car_engine)
 
@@ -67,8 +70,8 @@ import java.util.*
              holder = convertView.tag as ViewHolder
              view = convertView
          }
-        holder.carName?.setText(carForList.get(position).name)
-        holder.carEngine?.setText(carForList.get(position).engine)
+         holder.carName?.text = carForList[position].name
+         holder.carEngine?.setText(carForList.get(position).engine)
 
          return view
      }

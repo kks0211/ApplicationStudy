@@ -1,4 +1,5 @@
 
 // Context
+   -역학 : ActivityManagerService에 접근 하도록 해주는 역할.
  - 문맥
-  - 엑티비티가 가지고 있는 주변 정보
+ - 엑티비티가 가지고 있는 주변 정보

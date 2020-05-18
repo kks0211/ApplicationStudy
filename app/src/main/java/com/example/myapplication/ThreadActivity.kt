@@ -11,36 +11,33 @@ class ThreadActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_thread)
 
-        val runable: Runnable = object : Runnable{
+        val runable: Runnable = object : Runnable {
             override fun run() {
                 Log.d("thrad-1", "thread is made")
             }
         }
 
-        val thread : Thread = Thread(runable)
+        val thread: Thread = Thread(runable)
 
         button.setOnClickListener {
             thread.start()
         }
 
-        Thread(object: Runnable{
+        Thread(object : Runnable {
             override fun run() {
                 Log.d("thrad-2", "thread is made")
             }
         }).start()
 
-        Thread(Runnable{
+        Thread(Runnable {
             Log.d("thrad-3", "thread is made")
             Thread.sleep(2000)
             //button.setBackgroundColor(getColor(R.color.textview_color)) // 메인 쓰레드만 접근 가능
-            runOnUiThread{
+            runOnUiThread {
                 button.setBackgroundColor(getColor(R.color.textview_color)) // 메인 쓰레드만 접근 가능
             }
 
         }).start()
-
-
-
-
     }
+
 }
